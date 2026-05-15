@@ -1,6 +1,19 @@
 def calculate_total(transactions: list) -> float:
-    """Calculates total spending from a list of validated transactions."""
-    return sum(t["amount"] for t in transactions)
+    """Calculates the net balance from a list of validated transactions.
+
+    Transactions tagged with ``type == "expense"`` are subtracted from the
+    balance; all others (income, unspecified, or any other type) are added.
+    Amounts themselves are always treated as magnitudes — the sign is derived
+    from ``type`` so callers don't have to encode it twice.
+    """
+    total = 0.0
+    for t in transactions:
+        amount = t["amount"]
+        if t.get("type") == "expense":
+            total -= amount
+        else:
+            total += amount
+    return total
 
 def calculate_average(transactions: list) -> float:
     """Calculates the average transaction amount."""
