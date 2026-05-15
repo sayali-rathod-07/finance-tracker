@@ -9,9 +9,9 @@ def main():
     
     # Sample data
     sample_data = [
-        {"amount": 50.0, "category": "Food", "date": "2026-05-01"},
-        {"amount": 120.0, "category": "Utilities", "date": "2026-05-02"},
-        {"amount": 30.0, "category": "Food", "date": "2026-05-03"}
+        {"amount": 50.0, "category": "Food", "type": "expense", "date": "2026-05-01"},
+        {"amount": 120.0, "category": "Utilities", "type": "expense", "date": "2026-05-02"},
+        {"amount": 30.0, "category": "Food", "type": "expense", "date": "2026-05-03"}
     ]
     
     valid_transactions = []

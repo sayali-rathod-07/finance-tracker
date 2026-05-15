@@ -14,7 +14,7 @@ def generate_text_report(transactions: list) -> str:
     
     lines = [
         "--- FINANCIAL REPORT ---",
-        f"Total Expenditure: ${total:.2f}",
+        f"Total Balance: ${total:.2f}",
         "Breakdown by Category:"
     ]
     
